@@ -1,5 +1,5 @@
 :root {
-    --branco: #FFFFFF;
+    --white: #FFFFFF;
     --Brand-Colors-Explorer-dark: #065E7C;
     --Platform-Aliases-Background: #121214;
     --Platform-Aliases-Shape-principal: #202024;
@@ -55,7 +55,6 @@ footer .info {
     padding: 12px 112px;
 }
 
-
 .content-header {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -79,10 +78,9 @@ nav img,
     font-style: normal;
     font-weight: 700;
     line-height: 160%;
-    /* 38.4px */
 }
 
-.moldura {
+.frame {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,11 +92,11 @@ nav img,
     background-color: white;
 }
 
-.moldura.profile {
+.frame.profile {
     padding: 0;
 }
 
-.moldura.profile img {
+.frame.profile img {
     object-fit: contain;
     width: auto;
     height: auto;
@@ -108,7 +106,6 @@ nav img,
     border-radius: 9999px;
 }
 
-
 .search-bar {
     display: flex;
     width: 1083px;
@@ -117,13 +114,11 @@ nav img,
     flex-shrink: 0;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.20);
-    color: var(--branco,white);
-    font-family: "Mulish",sans-serif;
+    color: var(--white, white);
+    font-family: "Mulish", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-
-    /* 16px */
 }
 
 main {
@@ -141,7 +136,7 @@ main .content-header {
 }
 
 .content-header .like-dislike img,
-.content-header .like-dislike .moldura {
+.content-header .like-dislike .frame {
     background: var(--Brand-Colors-Explorer-dark, #065E7C);
 }
 
@@ -149,7 +144,6 @@ main .content-header {
     display: flex;
     gap: 10px;
 }
-
 
 section {
     grid-area: sidebar;
@@ -179,7 +173,6 @@ footer {
     font-weight: 700;
     line-height: 160%;
     margin-bottom: 32px;
-    /* 38.4px */
 }
 
 .sidebar li {
@@ -205,7 +198,6 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: 160%;
-    /* 28.8px */
 }
 
 .sidebar .info p {
@@ -214,7 +206,6 @@ footer {
     font-weight: 400;
     line-height: 160%;
     font-size: 14px;
-    /* 22.4px */
 }
 
 .sidebar img {
@@ -222,46 +213,49 @@ footer {
     border-radius: 5px;
     background: lightgray 50% / cover no-repeat;
 }
-.search-bar::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: white;
-    opacity: 0.5;
-  }
-  .search-bar::-moz-placeholder { /* Firefox 19+ */
-    color: white;
-    opacity: 0.5;
-  }
-  .search-bar:-ms-input-placeholder { /* IE 10+ */
-    color: white;
-    opacity: 0.5;
-  }
 
-  section li img {
+.search-bar::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.search-bar::-moz-placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.search-bar:-ms-input-placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+section li img {
     transition: all 200ms ease-out;
-  }
-  
-  section li img:hover {
+}
+
+section li img:hover {
     filter: hue-rotate(7deg) contrast(101%) saturate(200%);
     transform: scale(1.1) rotate(-2deg);
-  }
+}
 
-  @keyframes move {
+@keyframes move {
     from {
-      transform: translateY(var(--startY));
+        transform: translateY(var(--startY));
     }
-  }
-  
-  section li {
+}
+
+section li {
     --delay: .4s;
     animation: appear .4s var(--delay) backwards;
-  }
-  
-  @keyframes appear {
+}
+
+@keyframes appear {
     0% {
-      opacity: 0;
-      transform: scale(0.7);
+        opacity: 0;
+        transform: scale(0.7);
     }
-  
+
     50% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
-  }
+}
